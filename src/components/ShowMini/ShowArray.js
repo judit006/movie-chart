@@ -5,7 +5,7 @@ import './ShowMini.css';
 function ShowArray({ showArray, onSelectShow }) {
     return (
         <Fragment>
-            <div style={{display: 'flex', flexWrap: 'wrap'}} className='show-mini'>
+            <div className='show-mini'>
                 {showArray.map((unit, i) => {
                     return (
                         <ShowMini

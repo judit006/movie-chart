@@ -1,19 +1,22 @@
 import React, { Fragment } from 'react';
-
+import './Header.css';
 function Header({onChangeSeason}) {
     return (
         <Fragment>
-            <div>
-                <img style={{maxWidth: "60px", height: 'auto'}} src={process.env.PUBLIC_URL + 'logo192.png'} alt='titleImg' />
-                <div style={{display: 'inline'}}>
-                    <div style={{display: 'inline'}}>
-                        <span onClick={onChangeSeason} value='winter'>Winter</span>
-                        <span onClick={onChangeSeason}>Spring</span>
-                        <span onClick={onChangeSeason}>Summer</span>
-                        <span onClick={onChangeSeason}>Fall</span>
-                    </div>
+            <nav>
+               
+               <div className='logo'><img style={{ height: 'auto'}} src={process.env.PUBLIC_URL + 'logo192.png'}  alt='titleImg' /> 
+               </div>
+
+                <div style={{display: 'inline'}} >
+                    <ul className='season push' >
+                     <li><span onClick={onChangeSeason} value='winter' className='season'>Winter</span></li>
+                     <li><span onClick={onChangeSeason} value='spring' className='season'>Spring</span></li>
+                     <li><span onClick={onChangeSeason} value='summer' className='season'>Summer</span></li>
+                     <li><span onClick={onChangeSeason} value='fall' className='season'>Fall</span></li>
+                    </ul>
                 </div>
-            </div>
+            </nav>
         </Fragment>
     );
 }

@@ -1,0 +1,26 @@
+.season {
+display: flex;
+list-style: none;
+
+padding: 1em;
+background-color:seashell;
+margin: auto;
+max-width: max-content;
+align-items: flex-start;
+
+}
+.push {
+
+margin-left: 73%;
+
+
+}
+
+li {
+
+}
+
+.logo {
+
+	width: 80px;
+}

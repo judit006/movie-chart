@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import Paginator from '../../components/Paginator/Paginator';
 import ShowList from '../ShowList/ShowList';
 import './App.css';
+import './App2.css';
 
 class App extends Component {
   constructor(props) {
@@ -33,14 +34,16 @@ class App extends Component {
   render(){
     return (
       <Fragment>
-        <header>
-          <Header onChangeSeason={this.onChangeSeason}/>
-        </header>
-        <div>
-          <Paginator onChangePage={this.onChangePage}/> 
-        </div>
-        <div>
-          <ShowList />
+        <div className="full-body">
+          <header>
+            <Header onChangeSeason={this.onChangeSeason}/>
+          </header>
+          <div>
+            <Paginator onChangePage={this.onChangePage}/> 
+          </div>
+          <div className="container">
+            <ShowList />
+          </div>
         </div>
       </Fragment>
     )
